@@ -13,3 +13,18 @@ build/
 轨迹/
 录屏/
 视频/
+
+# 但保留后端内嵌的前端构建产物（没有 Node 也能一条命令启动）
+!backend/web/dist/
+!backend/web/dist/**
+
+# 运行时数据：SQLite 台账与本地照片（不入库）
+backend/data/*.db
+backend/data/*.db-shm
+backend/data/*.db-wal
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+
+# 编译产物
+lostfound-server
+backend/lostfound-server
